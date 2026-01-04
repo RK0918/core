@@ -9,7 +9,7 @@ package hello.core.member;
 public class MemberServiceImpl implements MemberService{
 
     // MemberServiceImpl이 MemberRepository 인터페이스에만 의존해야 하는데,
-    // 직접 new MemoryMemberRepository()로 구체 클래스(구현체)를 의존하고 있다는 점이에요.
+    // 직접 new MemoryMemberRepository()로 구체 클래스(구현체)를 의존하고 있다는 점
     // 즉, 코드 상에서 이미 MemoryMemberRepository에 강하게 결합
     // 아래 코드 참고(강한결합)
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
