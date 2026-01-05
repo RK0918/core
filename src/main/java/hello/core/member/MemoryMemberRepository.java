@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MemoryMemberRepository implements MemberRepository{
-    // 원래는 동시성 이슈 때문에 CurrentHashMap을 쓰셔야 좋음.
-    private static Map<Long, Member> store = new HashMap<>();
+    // 원래는 동시성 이슈 때문에 CurrentHashMap을 써야 좋음.
+    private static final Map<Long, Member> store = new HashMap<>();
     // memory이므로 단 하나 존재하는 저장소로 만들기 위해 static
     @Override
     public void save(Member member) {
